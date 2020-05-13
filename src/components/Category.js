@@ -1,21 +1,41 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
+import { motion, AnimatePresence } from "framer-motion"
 
 import ProgramCard from "./ProgramCard"
 
 export default function Category({ title, programs }) {
+  const [isOpen, setIsOpen] = useState(true)
+
   return (
     <CategoryContainer>
-      <div className="category-title">
+      <div className="category-title" onClick={() => setIsOpen(!isOpen)}>
         <h3 className="line-through">
           <span>{title}</span>
         </h3>
       </div>
-      <div className="programs">
-        {programs.map(program => (
-          <ProgramCard program={program} key={program.id} />
-        ))}
-      </div>
+
+      <AnimatePresence initial={true}>
+        {isOpen && (
+          <motion.section
+            key="content"
+            initial="open"
+            animate="open"
+            exit="collapsed"
+            variants={{
+              open: { opacity: 1, height: "auto" },
+              collapsed: { opacity: 0, height: 0 },
+            }}
+            transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
+          >
+            <div className="programs">
+              {programs.map(program => (
+                <ProgramCard program={program} key={program.id} />
+              ))}
+            </div>
+          </motion.section>
+        )}
+      </AnimatePresence>
     </CategoryContainer>
   )
 }
