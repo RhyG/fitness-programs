@@ -14,7 +14,9 @@ export default function Footer() {
             A curated collection of the most popular and effective exercise
             routines and resources out there.
           </p>
-          <img src={GithubLogo} alt="Github" />
+          <a href="https://github.com/RhyG/fitness-programs" target="_blank">
+            <img src={GithubLogo} alt="Github" />
+          </a>
         </div>
         <div className="right-section">
           <Button label="Suggest an addition" />

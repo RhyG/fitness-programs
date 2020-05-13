@@ -91,7 +91,7 @@ const programs = [
   {
     program: "Tactical Barbell",
     description:
-      "A comprehensive strength and conditioning system – for the operational athlete that requires elite levels of physical performance across multiple fitness domainsLinear progression based push/pull/legs program.",
+      "A comprehensive strength and conditioning system – for the operational athlete that requires elite levels of physical performance across multiple fitness domains.",
     url: "http://tacticalbarbell.com/",
     tags: ["military and law enforcement", "strength training", "conditioning"],
   },

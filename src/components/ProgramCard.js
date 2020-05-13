@@ -18,6 +18,7 @@ const StyledProgramCard = styled.a`
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
   transition: all 0.2s ease-in-out;
+  max-width: 350px;
 
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.09) 0px 5px 20px;
