@@ -1,4 +1,3 @@
-import { useEffect, useState, useRef } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 export default () => {

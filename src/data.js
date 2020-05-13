@@ -10,6 +10,7 @@ const programs = [
       "5/3/1",
       "compound lift focused",
     ],
+    days: "3-5",
   },
   {
     program: "5/3/1 For Beginners",
@@ -22,6 +23,7 @@ const programs = [
       "compound lift focused",
       "beginner",
     ],
+    days: "3-5",
   },
   {
     program: "5/3/1 Building the Monolight",
@@ -34,6 +36,7 @@ const programs = [
       "5/3/1",
       "compound lift focused",
     ],
+    days: "3",
   },
   {
     program: "Greyskull LP",
@@ -47,6 +50,7 @@ const programs = [
       "compound lift focused",
       "beginner",
     ],
+    days: "3",
   },
   {
     program: "Strong Curves",
@@ -65,6 +69,7 @@ const programs = [
     description: "",
     url: "https://www.google.com",
     tags: ["strength training", "muscle building", "compound lift focused"],
+    days: "3-6",
   },
   {
     program: "Westside for Skinny Bastards",
@@ -87,6 +92,7 @@ const programs = [
     url:
       "https://www.reddit.com/r/Fitness/comments/37ylk5/a_linear_progression_based_ppl_program_for/",
     tags: ["strength training", "muscle building", "beginner"],
+    days: "6",
   },
   {
     program: "Tactical Barbell",
@@ -94,6 +100,7 @@ const programs = [
       "A comprehensive strength and conditioning system – for the operational athlete that requires elite levels of physical performance across multiple fitness domains.",
     url: "http://tacticalbarbell.com/",
     tags: ["military and law enforcement", "strength training", "conditioning"],
+    days: "2-6",
   },
 ]
 

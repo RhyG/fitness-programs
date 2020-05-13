@@ -1,24 +1,29 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useState } from "react"
 import styled from "styled-components"
 
 import useGetData from "../hooks/useGetData"
 import { getProgramsFromTag, getEmoji } from "../utils"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import Category from "../components/Category"
+import Tags from "../components/Tags"
 
 const IndexPage = () => {
   const { programs, tags } = useGetData()
 
+  const [filters, setFilters] = useState([])
+  const [filteredCategories, setFilteredCategories] = useState(tags)
+
+  const filterCategories = filter => {}
+
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Exercise Routines - Find What Gets You Fit" />
+      <Tags tags={tags} filterCategories={filterCategories} />
       <ContentContainer>
         <div className="container categories">
-          {tags.map(tag => (
+          {filteredCategories.map(tag => (
             <Category
               title={`${getEmoji(tag.tag)} ${tag.tag.toUpperCase()}`}
               programs={getProgramsFromTag(programs, tag.tag)}

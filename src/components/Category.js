@@ -42,9 +42,7 @@ const CategoryContainer = styled.div`
   .programs {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 2rem;
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; */
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
   }
 `
