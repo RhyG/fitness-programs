@@ -10,24 +10,18 @@ import Category from "../components/Category"
 import Tags from "../components/Tags"
 
 const IndexPage = () => {
-  const { programs, tags } = useGetData()
-
-  const [filters, setFilters] = useState([])
-  const [filteredCategories, setFilteredCategories] = useState(tags)
-
-  const filterCategories = filter => {}
+  const { programs, categories, tags } = useGetData()
 
   return (
     <Layout>
       <SEO title="Exercise Routines - Find What Gets You Fit" />
-      <Tags tags={tags} filterCategories={filterCategories} />
+      {/* <Tags tags={tags} /> */}
       <ContentContainer>
         <div className="container categories">
-          {filteredCategories.map(tag => (
+          {tags.map(({ tag, id }) => (
             <Category
-              title={`${getEmoji(tag.tag)} ${tag.tag.toUpperCase()}`}
-              programs={getProgramsFromTag(programs, tag.tag)}
-              key={tag.id}
+              title={`${getEmoji(tag)} ${tag.toUpperCase()}`}
+              programs={getProgramsFromTag(programs, tag)}
             />
           ))}
         </div>

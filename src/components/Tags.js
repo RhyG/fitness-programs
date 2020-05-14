@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 
 const gradientBackgrounds = {
   lightBlue: `linear-gradient(180deg, rgba(110,181,208,1) 0%, rgba(86,142,163,1) 100%);`,
@@ -8,18 +9,26 @@ const gradientBackgrounds = {
     "linear-gradient(180deg, rgba(168,212,173,1) 0%, rgba(154,200,159,1) 100%);",
 }
 
-export default function Tags({ tags, filterCategories }) {
+export default function Tags({ tags }) {
   return (
     <TagsContainer>
       <div className="container tags">
-        {tags.map(tag => (
-          <Tag onClick={() => filterCategories(tag.tag)}>
+        {tags.map((tag, index) => (
+          <Tag>
             <p>{tag.tag}</p>
           </Tag>
         ))}
       </div>
     </TagsContainer>
   )
+}
+
+Tags.propTypes = {
+  tags: PropTypes.array,
+}
+
+Tags.defaultProps = {
+  tags: [],
 }
 
 const TagsContainer = styled.div`
@@ -38,6 +47,8 @@ const Tag = styled.div`
   border-radius: 1rem;
   color: #fff;
   font-size: 1.5rem;
+  display: flex;
+  align-items: center;
 
   &:nth-of-type(3n + 1) {
     background: ${gradientBackgrounds.lightBlue};

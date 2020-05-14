@@ -17,7 +17,7 @@ const StyledProgramCard = styled.a`
   box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
   transition: all 0.2s ease-in-out;
   max-width: 370px;
-  height: max-content;
+  /* height: max-content; */
   border-radius: 1rem;
   padding: 2rem;
   background: #fff;

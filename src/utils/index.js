@@ -1,7 +1,7 @@
 const emojis = {
   strength_training: "🏋️",
   muscle_building: "💪",
-  beginner: "👶",
+  beginner_friendly: "👶",
   compound_lift_focused: "🏋️‍♂️",
   cardio: "🏃‍♂️",
   conditioning: "🚴‍♂️",

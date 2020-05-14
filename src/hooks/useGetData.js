@@ -21,5 +21,7 @@ export default () => {
     }
   `)
 
-  return { programs: allProgram.nodes, tags: allTag.nodes }
+  const categories = allTag.nodes.map(tag => tag.tag)
+
+  return { programs: allProgram.nodes, categories, tags: allTag.nodes }
 }

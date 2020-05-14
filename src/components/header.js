@@ -9,7 +9,7 @@ const Header = ({ siteTitle }) => (
       <h1>Exercise Routines</h1>
       <h2>
         A curated list of the most popular and effective exercise routines and
-        resources out there.
+        resources out there. If it's on here then it works.
       </h2>
     </div>
   </StyledHeader>
