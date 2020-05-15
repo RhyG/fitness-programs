@@ -19,7 +19,9 @@ export default function Footer() {
           </a>
         </div>
         <div className="right-section">
-          <Button label="Suggest an addition" />
+          <a href="https://github.com/RhyG/fitness-programs/issues/new">
+            <Button>Suggest an addition</Button>
+          </a>
         </div>
       </div>
     </StyledFooter>

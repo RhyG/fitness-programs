@@ -2,12 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 
-export default function Button({ label }) {
-  return <StyledButton>{label}</StyledButton>
+export default function Button({ children }) {
+  return <StyledButton>{children}</StyledButton>
 }
 
 Button.propTypes = {
-  label: PropTypes.string,
+  // label: PropTypes.string,
 }
 
 Button.defaultProps = {
